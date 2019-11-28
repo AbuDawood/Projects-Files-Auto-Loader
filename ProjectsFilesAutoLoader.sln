@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectsFilesAutoLoader", "ProjectsFilesAutoLoader\ProjectsFilesAutoLoader.csproj", "{59CDCD74-6A98-4A31-87C2-3BDBF995D461}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesAutoLoadApi", "FilesAutoLoadApi\FilesAutoLoadApi.csproj", "{36F51845-44D1-4073-A384-BF0E9BBEEA95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59CDCD74-6A98-4A31-87C2-3BDBF995D461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59CDCD74-6A98-4A31-87C2-3BDBF995D461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59CDCD74-6A98-4A31-87C2-3BDBF995D461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59CDCD74-6A98-4A31-87C2-3BDBF995D461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36F51845-44D1-4073-A384-BF0E9BBEEA95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36F51845-44D1-4073-A384-BF0E9BBEEA95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36F51845-44D1-4073-A384-BF0E9BBEEA95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36F51845-44D1-4073-A384-BF0E9BBEEA95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9B54648-0088-459F-B5F0-F7BECCDB4A18}
+	EndGlobalSection
+EndGlobal
