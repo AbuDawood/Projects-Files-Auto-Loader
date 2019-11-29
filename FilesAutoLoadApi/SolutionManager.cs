@@ -13,13 +13,10 @@ namespace FilesAutoLoadApi
 {
     public static class SolutionManager
     {
-        public static Solution Solution { get; private set; }
-
         public static readonly List<ProjectManager> ProjectManagers = new List<ProjectManager>();
 
         public static void Initialize(Solution solution)
         {
-            Solution = solution;
 
             ProjectManagers.ForEach(e => e.Dispose());
 
@@ -27,13 +24,22 @@ namespace FilesAutoLoadApi
 
             foreach (Project project in solution)
             {
-                if (File.Exists(project.FullName))
+                try
                 {
-                    var pMngr = new ProjectManager(project);
+                    if (File.Exists(project.FullName))
+                    {
+                        var pMngr = new ProjectManager(project);
 
-                    ProjectManagers.Add(pMngr);
+                        ProjectManagers.Add(pMngr);
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    //throw;
                 }
             }
+
         }
 
         private static ProjectManager GetSuitable(string fullPath)

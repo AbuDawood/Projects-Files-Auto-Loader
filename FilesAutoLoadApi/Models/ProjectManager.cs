@@ -195,10 +195,10 @@ namespace FilesAutoLoadApi.Models
                     watcher.Created += new FileSystemEventHandler((obj, evnt) => OnCreated(obj, extension, evnt));
                     break;
                 case TargetEventHandler.Deleted:
-                    watcher.Deleted += new FileSystemEventHandler((obj, evnt) => OnDeleted(obj, extension, evnt));
+                    // watcher.Deleted += new FileSystemEventHandler((obj, evnt) => OnDeleted(obj, extension, evnt));
                     break;
                 case TargetEventHandler.Changed:
-                    watcher.Changed += new FileSystemEventHandler((obj, evnt) => OnChanged(obj, extension, evnt));
+                    //  watcher.Changed += new FileSystemEventHandler((obj, evnt) => OnChanged(obj, extension, evnt));
                     break;
             }
 
@@ -235,7 +235,6 @@ namespace FilesAutoLoadApi.Models
 
         public async Task UnLoadFile(string path)
         {
-            throw new NotImplementedException();
         }
 
         private void OnCreated(object source, string filter, FileSystemEventArgs e)
@@ -253,7 +252,7 @@ namespace FilesAutoLoadApi.Models
             if (filter == string.Empty && !FileIoHelper.PathIsDirectory(e.FullPath))
                 return;
 
-            UnLoadFile(e.FullPath).ConfigureAwait(true).GetAwaiter();
+           // UnLoadFile(e.FullPath).ConfigureAwait(true).GetAwaiter();
         }
 
         private static void OnChanged(object source, string filter, FileSystemEventArgs e)
@@ -261,8 +260,6 @@ namespace FilesAutoLoadApi.Models
             // retrict to directories when filter is empty
             if (filter == string.Empty && !FileIoHelper.PathIsDirectory(e.FullPath))
                 return;
-
-            throw new NotImplementedException();
         }
 
         //--------------------------------------------------------------------------------------------------------------------------
